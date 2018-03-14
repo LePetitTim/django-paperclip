@@ -1,7 +1,10 @@
-from django.contrib.auth.models import User, Permission
+from django.contrib.auth.models import Permission
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from paperclip.settings import get_filetype_model, get_attachment_model
 from .models import TestObject
+
+User = get_user_model()
 
 
 class ViewTestCase(TestCase):
